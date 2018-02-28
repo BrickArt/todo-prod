@@ -1051,8 +1051,7 @@ var UsersService = /** @class */ (function (_super) {
         return _this;
     }
     UsersService.prototype.getUserByUsername = function (username) {
-        return this.get("users?username=" + username)
-            .map(function (user) { return user[0] ? user[0] : undefined; });
+        return this.get("users?username=" + username);
     };
     UsersService.prototype.createNewUser = function (user) {
         return this.post('users', user);
