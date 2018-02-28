@@ -833,7 +833,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var BaseApi = /** @class */ (function () {
     function BaseApi(http) {
         this.http = http;
-        this.baseUrl = 'https://todo-for-nothing.herokuapp.com';
+        this.baseUrl = 'https://todo-for-nothing.herokuapp.com/';
     }
     BaseApi.prototype.getUrl = function (url) {
         if (url === void 0) { url = ''; }
