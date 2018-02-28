@@ -947,7 +947,7 @@ var SystemComponent = /** @class */ (function () {
         var _this = this;
         this.taskService.createNewTaskBoard(taskBoard).subscribe(function (taskb) {
             _this.hide = true;
-            _this.tasksBoards.push(taskBoard);
+            _this.tasksBoards.push(taskb);
         });
     };
     SystemComponent.prototype.loadTaskBoards = function () {
