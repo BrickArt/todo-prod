@@ -41,7 +41,7 @@ router.route('/users')
         }
     })
 
-router.route('/taskboards/:id?')
+router.route('/tasksboards/:id?')
     .get(function(req, res, next) {
         if (req.query.user_id) {
             console.log(req.query)
