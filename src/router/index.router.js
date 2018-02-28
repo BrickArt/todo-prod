@@ -78,9 +78,10 @@ router.route('/tasksboards/:id?')
     .put(function (req, res, next) {
         if (req.body && req.params.id) {
             Taskboard.findById(req.params.id).then(doc => {
+                console.log(req.body, doc)
                 req.body.user_id ? doc.user_id = req.body.user_id : doc.user_id = doc.user_id;
-                req.body.title ? doc.user_id = req.body.title : doc.user_id = doc.title;
-                req.body.tasks ? doc.user_id = req.body.tasks : doc.user_id = doc.tasks;
+                req.body.title ? doc.title = req.body.title : doc.title = doc.title;
+                req.body.tasks ? doc.tasks = req.body.tasks : doc.tasks = doc.tasks;
                 
                 doc.save(function (err) {
                     if (err) {
